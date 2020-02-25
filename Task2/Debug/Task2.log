@@ -1,2 +1,4 @@
 ﻿  creature.cpp
+C:\Users\Дмитрий Лаптев\source\repos\InheritanceExample\Task2\creature.h(99,1): warning C4250: eagle: наследуется "bird::bird::_print" через превосходство
+C:\Users\Дмитрий Лаптев\source\repos\InheritanceExample\Task2\creature.h(59): message : см. объявление "bird::_print"
   Task2.vcxproj -> C:\Users\Дмитрий Лаптев\source\repos\InheritanceExample\Debug\Task2.exe
