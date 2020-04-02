@@ -8,7 +8,7 @@ private:
 	string title;
 	double mass;
 protected:
-	creature() :mass(0.0) {}
+	creature() : mass(0.0) {}
 	creature(const creature& obj) : title(obj.title), mass(obj.mass) {}
 	creature(const string& _title, double _mass) : title(_title), mass(_mass) {}
 	virtual ~creature() { cout << "creature deleted" << endl << endl; }
@@ -30,7 +30,7 @@ class animal :public creature
 private:
 	double speed;
 public:
-	animal() : creature() {}
+	animal() : creature(), speed(0.0) {}
 	animal(const animal& obj) : creature(obj), speed(obj.speed) {}
 	animal(const string& _title, double _mass, double _speed) : creature(_title, _mass), speed(_speed) {}
 	double get_speed() const
@@ -50,7 +50,7 @@ class mythical :public animal
 private:
 	double power;
 public:
-	mythical() : animal() {}
+	mythical() : animal(), power(0.0) {}
 	mythical(const mythical& obj) : animal(obj), power(obj.power) {}
 	mythical(const string& _title, double _mass, double _speed, double _power) : animal(_title, _mass, _speed), power(_power) {}
 	double get_power() const
@@ -71,7 +71,7 @@ class biological :public animal
 private:
 	double strength;
 public:
-	biological() : animal() {}
+	biological() : animal(), strength(0.0) {}
 	biological(const biological& obj) : animal(obj), strength(obj.strength) {}
 	biological(const string& _title, double _mass, double _speed, double _strength) : animal(_title, _mass, _speed), strength(_strength) {}
 	double get_strength() const
@@ -91,7 +91,7 @@ class magic_being :public mythical
 private:
 	double incantation_knowledge;
 public:
-	magic_being() : mythical() {}
+	magic_being() : mythical(), incantation_knowledge(0.0) {}
 	magic_being(const magic_being& obj) : mythical(obj), incantation_knowledge(obj.incantation_knowledge) {}
 	magic_being(const string& _title, double _mass, double _speed, double _power, double _incantation_knowledge) : mythical(_title, _mass, _speed, _power), incantation_knowledge(_incantation_knowledge) {}
 	double get_knowledge() const
@@ -111,7 +111,7 @@ class human_being :public biological
 private:
 	double mind;
 public:
-	human_being() : biological() {}
+	human_being() : biological(), mind(0.0) {}
 	human_being(const human_being& obj) : biological(obj), mind(obj.mind) {}
 	human_being(const string& _title, double _mass, double _speed, double _strength, double _mind) : biological(_title, _mass, _speed, _strength), mind(_mind) {}
 	double get_mind() const
@@ -133,7 +133,7 @@ class magic_thing :public virtual magic_being
 private:
 	double durability;
 public:
-	magic_thing() : magic_being() {}
+	magic_thing() : magic_being(), durability(0.0) {}
 	magic_thing(const magic_thing& obj) : magic_being(obj), durability(obj.durability) {}
 	magic_thing(const string& _title, double _mass, double _speed, double _power, double _incantation_knowledge, double _durability) : magic_being(_title, _mass, _speed, _power, _incantation_knowledge), durability(_durability) {}
 	double get_durability() const
@@ -153,7 +153,7 @@ class homo_sapiens :public virtual human_being
 private:
 	double hope;
 public:
-	homo_sapiens() : human_being() {}
+	homo_sapiens() : human_being(), hope(0.0) {}
 	homo_sapiens(const homo_sapiens& obj) : human_being(obj), hope(obj.hope) {}
 	homo_sapiens(const string& _title, double _mass, double _speed, double _strength, double _mind, double _hope) : human_being(_title, _mass, _speed, _strength, _mind), hope(_hope) {}
 	double get_hope() const

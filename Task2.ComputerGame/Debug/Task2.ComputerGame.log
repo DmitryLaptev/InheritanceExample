@@ -1,4 +1,3 @@
 ﻿  creature.cpp
-  Task2.ComputerGame.cpp
-  Создание кода...
+C:\Users\Дмитрий Лаптев\source\repos\InheritanceExample\Task2.ComputerGame\creature.cpp(6,15): warning C4930: homo_sapiens hum(void): функция с прототипом не вызвана (предполагалось определение переменной?)
   Task2.ComputerGame.vcxproj -> C:\Users\Дмитрий Лаптев\source\repos\InheritanceExample\Debug\Task2.ComputerGame.exe
